@@ -31,6 +31,7 @@
       }
     ]
   },
+  "icon": "logo.png",
   "keywords": [
     "monokai",
     "monokai sublime",

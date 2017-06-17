@@ -3,8 +3,11 @@ Extends Monokai Theme (based on [Monokai TextMate Theme][original-theme-url])
 
 [GitHub repository][github-url]
 
-<!--![Monokai Extended Screenshot][screenshot-image]-->
-
+<p align="center">
+  <a href="https://github.com/SuperPaintman/vscode-monokai-extended">
+    <img alt="Logo" src="logo-transparent-bg-small.png">
+  </a>
+</p>
 
 --------------------------------------------------------------------------------
 
@@ -51,6 +54,7 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 [license-url]: LICENSE
 [changelog-url]: CHANGELOG.md
 [screenshot-image]: screenshot.png
+[logo-image]: logo-transparent-bg-small.png
 [github-url]: https://github.com/SuperPaintman/vscode-monokai-extended
 [vs-marketplace-url]: https://marketplace.visualstudio.com/items/SuperPaintman.monokai-extended
 [original-theme-url]: http://colorsublime.com/theme/Monokai
