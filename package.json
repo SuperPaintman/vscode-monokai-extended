@@ -32,6 +32,10 @@
     ]
   },
   "icon": "logo.png",
+  "galleryBanner": {
+    "color": "#272822",
+    "theme": "dark"
+  },
   "keywords": [
     "monokai",
     "monokai sublime",
