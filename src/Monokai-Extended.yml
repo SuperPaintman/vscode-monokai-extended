@@ -30,6 +30,7 @@
   INHERITED_CLASS:    "{{GREEN}}"
   FUNCTION_NAME:      "{{GREEN}}"
   TAG_ATTRIBUTE:      "{{GREEN}}"
+  TEMPLATE_BRAKET:    "#E69F66"
 
 name: Monokai Extended
 type: dark
@@ -187,6 +188,17 @@ tokenColors:
     settings:
       background: "{{PURPLE}}"
       foreground: "{{WHITISH}}"
+  - name: Template Expression
+    scope:
+      - meta.template.expression
+    settings:
+      foreground: "{{WHITISH}}"
+  - name: Template Expression Brakets
+    scope:
+      - punctuation.definition.template-expression.begin
+      - punctuation.definition.template-expression.end
+    settings:
+      foreground: "{{TEMPLATE_BRAKET}}"
   - name: JSON String
     scope:
       - meta.structure.dictionary.json string.quoted.double.json
