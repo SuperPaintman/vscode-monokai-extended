@@ -1,4 +1,9 @@
 # Monokai Extended
+
+[![Marketplace][badge-marketplace-image]][vs-marketplace-url]
+[![Installs][badge-installs-image]][vs-marketplace-url]
+[![Ratings][badge-ratings-image]][vs-marketplace-url]
+
 Extends Monokai Theme (based on [Monokai TextMate Theme][original-theme-url])
 
 [GitHub repository][github-url]
@@ -83,3 +88,6 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 [github-url]: https://github.com/SuperPaintman/vscode-monokai-extended
 [vs-marketplace-url]: https://marketplace.visualstudio.com/items/SuperPaintman.monokai-extended
 [original-theme-url]: http://colorsublime.com/theme/Monokai
+[badge-marketplace-image]: http://vsmarketplacebadge.apphb.com/version/SuperPaintman.monokai-extended.svg
+[badge-installs-image]: http://vsmarketplacebadge.apphb.com/installs/SuperPaintman.monokai-extended.svg
+[badge-ratings-image]: http://vsmarketplacebadge.apphb.com/rating-short/SuperPaintman.monokai-extended.svg
