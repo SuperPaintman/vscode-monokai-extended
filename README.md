@@ -20,6 +20,27 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 --------------------------------------------------------------------------------
 
 
+## Screenshot
+
+#### TypeScript
+![TypeScript Screenshot][screenshot-typescript-image]
+
+#### JavaScript
+![JavaScript Screenshot][screenshot-javascript-image]
+
+#### CSS
+![CSS Screenshot][screenshot-css-image]
+
+#### HTML
+![HTML Screenshot][screenshot-html-image]
+
+#### JSON
+![JSON Screenshot][screenshot-json-image]
+
+
+--------------------------------------------------------------------------------
+
+
 ## Contributing
 
 1. Fork it (<https://github.com/SuperPaintman/vscode-monokai-extended/fork>)
@@ -53,8 +74,12 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 
 [license-url]: LICENSE
 [changelog-url]: CHANGELOG.md
-[screenshot-image]: screenshot.png
 [logo-image]: logo-transparent-bg-small.png
+[screenshot-typescript-image]: README/screenshot-typescript.png
+[screenshot-javascript-image]: README/screenshot-javascript.png
+[screenshot-css-image]: README/screenshot-css.png
+[screenshot-html-image]: README/screenshot-html.png
+[screenshot-json-image]: README/screenshot-json.png
 [github-url]: https://github.com/SuperPaintman/vscode-monokai-extended
 [vs-marketplace-url]: https://marketplace.visualstudio.com/items/SuperPaintman.monokai-extended
 [original-theme-url]: http://colorsublime.com/theme/Monokai
