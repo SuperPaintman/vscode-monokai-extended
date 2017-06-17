@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/SuperPaintman/vscode-monokai-extended"
   },
-  "scripts":{
+  "scripts": {
     "build": "node ./scripts/build.js",
     "vscode:prepublish": "npm run build"
   },
@@ -39,6 +39,8 @@
     "theme"
   ],
   "devDependencies": {
-    "js-yaml": "3.8.4"
+    "handlebars": "4.0.10",
+    "js-yaml": "3.8.4",
+    "tinycolor2": "1.4.1"
   }
 }
