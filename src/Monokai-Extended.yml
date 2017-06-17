@@ -188,6 +188,29 @@ tokenColors:
     settings:
       background: "{{PURPLE}}"
       foreground: "{{WHITISH}}"
+  - scope:
+      - constant.numeric.line-number.find-in-files - match
+    settings:
+      foreground: "{{alpha PURPLE 0.627}}"
+  - scope:
+      - entity.name.filename.find-in-files
+    settings:
+      foreground: "{{YELLOW}}"
+  - name: Object Key
+    scope:
+      - meta.object-literal.key
+    settings:
+      foreground: "{{YELLOW}}"
+  - name: Object Key-Value Separator
+    scope:
+      - punctuation.separator.key-value
+    settings:
+      foreground: "{{PURPLE}}"
+  - name: Punctuation Accessor
+    scope:
+      - punctuation.accessor
+    settings:
+      foreground: "{{RED}}"
   - name: Template Expression
     scope:
       - meta.template.expression
@@ -199,11 +222,22 @@ tokenColors:
       - punctuation.definition.template-expression.end
     settings:
       foreground: "{{TEMPLATE_BRAKET}}"
+
+  # JSON
   - name: JSON String
     scope:
-      - meta.structure.dictionary.json string.quoted.double.json
+      - meta.structure.dictionary.json
+      - string.quoted.double.json
     settings:
       foreground: "{{GREY_LIGHT}}"
+  - name: JSON Property
+    scope:
+      - support.type.property-name.json
+    settings:
+      fontStyle: ''
+      foreground: "{{RED}}"
+
+  # Diff
   - name: diff.header
     scope:
       - meta.diff
@@ -223,13 +257,5 @@ tokenColors:
   - name: diff.changed
     scope:
       - markup.changed
-    settings:
-      foreground: "{{YELLOW}}"
-  - scope:
-      - constant.numeric.line-number.find-in-files - match
-    settings:
-      foreground: "{{alpha PURPLE 0.627}}"
-  - scope:
-      - entity.name.filename.find-in-files
     settings:
       foreground: "{{YELLOW}}"
