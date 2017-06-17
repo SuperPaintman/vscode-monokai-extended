@@ -113,13 +113,13 @@ tokenColors:
     scope:
       - entity.name.class
     settings:
-      fontStyle: underline
+      fontStyle: ''
       foreground: "{{CLASS_NAME}}"
   - name: Inherited class
     scope:
       - entity.other.inherited-class
     settings:
-      fontStyle: italic underline
+      fontStyle: ''
       foreground: "{{INHERITED_CLASS}}"
   - name: Function name
     scope:
