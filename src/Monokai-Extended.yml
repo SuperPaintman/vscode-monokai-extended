@@ -1,10 +1,43 @@
+.variables:
+  GREY:               "#75715E"
+  GREY_LIGHT:         "#CFCFC2"
+  WHITISH:            "#F8F8F0"
+  YELLOW:             "#E6DB74"
+  BLUE:               "#66D9EF"
+  PURPLE:             "#AE81FF"
+  RED:                '#F92672'
+  GREEN:              "#A6E22E"
+  ORANGE:             "#FD971F"
+
+  BACKGROUND:         "#272822"
+  FOREGROUND:         "#F8F8F2"
+  FOREGROUND_CURSOR:  "{{WHITISH}}"
+
+  COMMENT:            "{{GREY}}"
+  STRING:             "{{YELLOW}}"
+  NUMBER:             "{{PURPLE}}"
+  CONSTANT:           "{{PURPLE}}"
+  KEYWORD:            "{{RED}}"
+  STORAGE:            "{{RED}}"
+  TAG_NAME:           "{{RED}}"
+  TYPE:               "{{BLUE}}"
+  LIBRARY_FUNCTION:   "{{BLUE}}"
+  LIBRARY_CONSTANT:   "{{BLUE}}"
+  LIBRARY_CLASS:      "{{BLUE}}"
+  LIBRARY_TYPE:       "{{BLUE}}"
+  ARGUMENT:           "{{ORANGE}}"
+  CLASS_NAME:         "{{GREEN}}"
+  INHERITED_CLASS:    "{{GREEN}}"
+  FUNCTION_NAME:      "{{GREEN}}"
+  TAG_ATTRIBUTE:      "{{GREEN}}"
+
 name: Monokai Extended
 type: dark
 colors:
   # Editor
-  editor.background:              "#272822"
-  editorCursor.foreground:        "#F8F8F0"
-  editor.foreground:              "#F8F8F2"
+  editor.background:              "{{BACKGROUND}}"
+  editorCursor.foreground:        "{{FOREGROUND_CURSOR}}"
+  editor.foreground:              "{{FOREGROUND}}"
   editor.lineHighlightBackground: "#35352b"
   editor.selectionBackground:     "#49483E"
   # Editor whitespace
@@ -17,8 +50,8 @@ colors:
   sideBar.background:             "#252620"
 tokenColors:
   - settings:
-      background:                "#272822"
-      foreground:                "#F8F8F2"
+      background:                "{{BACKGROUND}}"
+      foreground:                "{{FOREGROUND}}"
       findHighlight:             "#FFE792"
       findHighlightForeground:   "#000000"
       selectionBorder:           "#222218"
@@ -32,28 +65,28 @@ tokenColors:
     scope:
       - comment
     settings:
-      foreground: "#75715E"
+      foreground: "{{COMMENT}}"
   - name: String
     scope:
       - string
     settings:
-      foreground: "#E6DB74"
+      foreground: "{{STRING}}"
   - name: Number
     scope:
       - constant.numeric
     settings:
-      foreground: "#AE81FF"
+      foreground: "{{NUMBER}}"
   - name: Built-in constant
     scope:
       - constant.language
     settings:
-      foreground: "#AE81FF"
+      foreground: "{{CONSTANT}}"
   - name: User-defined constant
     scope:
       - constant.character
       - constant.other
     settings:
-      foreground: "#AE81FF"
+      foreground: "{{CONSTANT}}"
   - name: Variable
     scope:
       - variable
@@ -63,74 +96,79 @@ tokenColors:
     scope:
       - keyword
     settings:
-      foreground: "#F92672"
+      foreground: "{{KEYWORD}}"
   - name: Storage
     scope:
       - storage
     settings:
       fontStyle: ''
-      foreground: "#F92672"
+      foreground: "{{STORAGE}}"
   - name: Storage type
     scope:
       - storage.type
     settings:
       fontStyle: italic
-      foreground: "#66D9EF"
+      foreground: "{{TYPE}}"
   - name: Class name
     scope:
       - entity.name.class
     settings:
       fontStyle: underline
-      foreground: "#A6E22E"
+      foreground: "{{CLASS_NAME}}"
   - name: Inherited class
     scope:
       - entity.other.inherited-class
     settings:
       fontStyle: italic underline
-      foreground: "#A6E22E"
+      foreground: "{{INHERITED_CLASS}}"
   - name: Function name
     scope:
       - entity.name.function
     settings:
       fontStyle: ''
-      foreground: "#A6E22E"
+      foreground: "{{FUNCTION_NAME}}"
   - name: Function argument
     scope:
       - variable.parameter
     settings:
       fontStyle: italic
-      foreground: "#FD971F"
+      foreground: "{{ARGUMENT}}"
   - name: Tag name
     scope:
       - entity.name.tag
     settings:
       fontStyle: ''
-      foreground: "#F92672"
+      foreground: "{{TAG_NAME}}"
   - name: Tag attribute
     scope:
       - entity.other.attribute-name
     settings:
       fontStyle: ''
-      foreground: "#A6E22E"
+      foreground: "{{TAG_ATTRIBUTE}}"
   - name: Library function
     scope:
       - support.function
     settings:
       fontStyle: ''
-      foreground: "#66D9EF"
+      foreground: "{{LIBRARY_FUNCTION}}"
   - name: Library constant
     scope:
       - support.constant
     settings:
       fontStyle: ''
-      foreground: "#66D9EF"
-  - name: Library class/type
+      foreground: "{{LIBRARY_CONSTANT}}"
+  - name: Library class
     scope:
-      - support.type
       - support.class
     settings:
       fontStyle: italic
-      foreground: "#66D9EF"
+      foreground: "{{LIBRARY_CLASS}}"
+  - name: Library type
+    scope:
+      - support.type
+    settings:
+      fontStyle: italic
+      foreground: "{{LIBRARY_TYPE}}"
   - name: Library variable
     scope:
       - support.other.variable
@@ -140,46 +178,46 @@ tokenColors:
     scope:
       - invalid
     settings:
-      background: "#F92672"
+      background: "{{RED}}"
       fontStyle: ''
-      foreground: "#F8F8F0"
+      foreground: "{{WHITISH}}"
   - name: Invalid deprecated
     scope:
       - invalid.deprecated
     settings:
-      background: "#AE81FF"
-      foreground: "#F8F8F0"
+      background: "{{PURPLE}}"
+      foreground: "{{WHITISH}}"
   - name: JSON String
     scope:
       - meta.structure.dictionary.json string.quoted.double.json
     settings:
-      foreground: "#CFCFC2"
+      foreground: "{{GREY_LIGHT}}"
   - name: diff.header
     scope:
       - meta.diff
       - meta.diff.header
     settings:
-      foreground: "#75715E"
+      foreground: "{{GREY}}"
   - name: diff.deleted
     scope:
       - markup.deleted
     settings:
-      foreground: "#F92672"
+      foreground: "{{RED}}"
   - name: diff.inserted
     scope:
       - markup.inserted
     settings:
-      foreground: "#A6E22E"
+      foreground: "{{GREEN}}"
   - name: diff.changed
     scope:
       - markup.changed
     settings:
-      foreground: "#E6DB74"
+      foreground: "{{YELLOW}}"
   - scope:
       - constant.numeric.line-number.find-in-files - match
     settings:
-      foreground: "#AE81FFA0"
+      foreground: "{{alpha PURPLE 0.627}}"
   - scope:
       - entity.name.filename.find-in-files
     settings:
-      foreground: "#E6DB74"
+      foreground: "{{YELLOW}}"
