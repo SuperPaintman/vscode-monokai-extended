@@ -10,7 +10,7 @@ Extends Monokai Theme (based on [Monokai TextMate Theme][original-theme-url])
 
 <p align="center">
   <a href="https://github.com/SuperPaintman/vscode-monokai-extended">
-    <img alt="Logo" src="logo-transparent-bg-small.png">
+    <img alt="Logo" src="https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/logo-transparent-bg-small.png">
   </a>
 </p>
 
@@ -77,14 +77,14 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 [MIT][license-url]
 
 
-[license-url]: LICENSE
-[changelog-url]: CHANGELOG.md
-[logo-image]: logo-transparent-bg-small.png
-[screenshot-typescript-image]: README/screenshot-typescript.png
-[screenshot-javascript-image]: README/screenshot-javascript.png
-[screenshot-css-image]: README/screenshot-css.png
-[screenshot-html-image]: README/screenshot-html.png
-[screenshot-json-image]: README/screenshot-json.png
+[license-url]: https://github.com/SuperPaintman/vscode-monokai-extended/blob/master/LICENSE
+[changelog-url]: https://github.com/SuperPaintman/vscode-monokai-extended/blob/master/CHANGELOG.md
+[logo-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/logo-transparent-bg-small.png
+[screenshot-typescript-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-typescript.png
+[screenshot-javascript-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-javascript.png
+[screenshot-css-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-css.png
+[screenshot-html-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-html.png
+[screenshot-json-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-json.png
 [github-url]: https://github.com/SuperPaintman/vscode-monokai-extended
 [vs-marketplace-url]: https://marketplace.visualstudio.com/items/SuperPaintman.monokai-extended
 [original-theme-url]: http://colorsublime.com/theme/Monokai
