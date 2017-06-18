@@ -17,7 +17,7 @@
   STRING:             "{{YELLOW}}"
   NUMBER:             "{{PURPLE}}"
   CONSTANT:           "{{PURPLE}}"
-  VARIABLE:           "{{FOREGROUND}}"
+  VARIABLE:           "{{WHITISH}}"
   KEYWORD:            "{{RED}}"
   STORAGE:            "{{RED}}"
   TAG_NAME:           "{{RED}}"
@@ -26,6 +26,7 @@
   LIBRARY_CONSTANT:   "{{BLUE}}"
   LIBRARY_CLASS:      "{{BLUE}}"
   LIBRARY_TYPE:       "{{BLUE}}"
+  LIBRARY_VARIABLE:   "{{BLUE}}"
   ARGUMENT:           "{{ORANGE}}"
   CLASS_NAME:         "{{GREEN}}"
   INHERITED_CLASS:    "{{GREEN}}"
@@ -322,12 +323,26 @@ tokenColors:
       foreground: "{{LIBRARY_TYPE}}"
       fontStyle:  italic
 
-  # ?
+  # ```ts
+  # __dirname
+  # __filename
+  # root
+  # ```
   - name: Library variable
     scope:
-      - support.other.variable
+      - support.variable
     settings:
-      fontStyle:  ""
+      foreground: "{{LIBRARY_VARIABLE}}"
+
+  # ```ts
+  # //      v
+  # text.length
+  # ```
+  - name: Library property
+    scope:
+      - support.variable.property
+    settings:
+      foreground: "{{VARIABLE}}"
 
   # ?
   - name: Invalid
@@ -428,6 +443,46 @@ tokenColors:
       - entity.name.filename.find-in-files
     settings:
       foreground: "{{YELLOW}}"
+
+
+  ##############################################################################
+  #
+  # JavaScript / TypeScript / JSX / TSX
+  #
+  ##############################################################################
+  # ```ts
+  # class Animal {
+  #   constructor() {
+  #     // v
+  #     this.name = "SuperPaintman"
+  #   }
+  # }
+  # ```
+  - name: JavaScript - this
+    scope:
+      - variable.language.this.ts
+      - variable.language.this.js
+      - variable.language.this.tsx
+      - variable.language.this.jsx
+    settings:
+      foreground: "{{CONSTANT}}"
+
+  # ```tsx
+  # <header className="header">
+  #   <h1>todos</h1>
+  #   {/*    v           */}
+  #   <TodoTextInput newTodo
+  #                  onSave={this.handleSave}
+  #                  placeholder="What needs to be done?" />
+  # </header>
+  # ```
+  - scope:
+      - support.class.component.js
+      - support.class.component.jsx
+      - support.class.component.ts
+      - support.class.component.tsx
+    settings:
+      foreground: "{{TAG_NAME}}"
 
 
   ##############################################################################
