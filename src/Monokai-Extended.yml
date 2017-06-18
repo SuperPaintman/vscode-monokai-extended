@@ -17,10 +17,11 @@
   STRING:             "{{YELLOW}}"
   NUMBER:             "{{PURPLE}}"
   CONSTANT:           "{{PURPLE}}"
+  VARIABLE:           "{{FOREGROUND}}"
   KEYWORD:            "{{RED}}"
   STORAGE:            "{{RED}}"
   TAG_NAME:           "{{RED}}"
-  TYPE:               "{{BLUE}}"
+  STORAGE_TYPE:       "{{BLUE}}"
   LIBRARY_FUNCTION:   "{{BLUE}}"
   LIBRARY_CONSTANT:   "{{BLUE}}"
   LIBRARY_CLASS:      "{{BLUE}}"
@@ -62,160 +63,352 @@ tokenColors:
       bracketContentsForeground: "#F8F8F2A5"
       bracketContentsOptions:    underline
       tagsOptions:               stippled_underline
+
+
+  ##############################################################################
+  #
+  # Common
+  #
+  ##############################################################################
+  # ```ts
+  # // Comment
+  # /* Multiline comment */
+  # ```
   - name: Comment
     scope:
       - comment
     settings:
       foreground: "{{COMMENT}}"
+
+  # ```ts
+  # "String"
+  # ```
   - name: String
     scope:
       - string
     settings:
       foreground: "{{STRING}}"
+
+  # ```ts
+  # 1234
+  # 0xFF
+  # ```
   - name: Number
     scope:
       - constant.numeric
     settings:
       foreground: "{{NUMBER}}"
-  - name: Built-in constant
+
+  # ```ts
+  # true
+  # false
+  # null
+  # undefined
+  # NaN
+  # ```
+  - name: Constant - Built-in
     scope:
       - constant.language
     settings:
       foreground: "{{CONSTANT}}"
-  - name: User-defined constant
+
+  # ```ts
+  # //                     v  v
+  # "String with constants \n \t"
+  # ```
+  #
+  # ```css
+  # body {
+  #   /*        v    */
+  #   color: #4d4d4d;
+  # }
+  # ```
+  - name: Constant - User-defined
     scope:
       - constant.character
       - constant.other
     settings:
       foreground: "{{CONSTANT}}"
+
+  # ```ts
+  # //       v
+  # import React from "react"
+  # //       v
+  # const username = "SuperPaintman"
+  # ```
   - name: Variable
     scope:
       - variable
     settings:
-      fontStyle: ''
+      foreground: "{{VARIABLE}}"
+
+  # ```ts
+  # // v          v
+  # import React from "react"
+  # // v
+  # export const name = "SuperPaintman"
+  # //           v
+  # const sam = new Snake("Sammy the Python")
+  # ```
   - name: Keyword
     scope:
       - keyword
     settings:
       foreground: "{{KEYWORD}}"
+
+  # ```ts
+  # //              v
+  # class Header extends Component { }
+  #
+  # class Animal {
+  #   //            v
+  #   constructor(public name: string) { }
+  # }
+  # ```
   - name: Storage
     scope:
       - storage
     settings:
-      fontStyle: ''
       foreground: "{{STORAGE}}"
+
+  # ```ts
+  # // v
+  # class Animal {
+  #   //   v
+  #   constructor(public name: string) { }
+  # }
+  #
+  # // v
+  # const sam = new Snake("Sammy the Python");
+  #
+  # //  v
+  # (() => {});
+  # ```
   - name: Storage type
     scope:
       - storage.type
     settings:
-      fontStyle: italic
-      foreground: "{{TYPE}}"
+      foreground: "{{STORAGE_TYPE}}"
+      fontStyle:  italic
+
+  # ?
   - name: Class name
     scope:
       - entity.name.class
     settings:
-      fontStyle: ''
       foreground: "{{CLASS_NAME}}"
+      fontStyle:  ""
+
+  # ```ts
+  # //                  v
+  # class Dog extends Animal { }
+  # ```
   - name: Inherited class
     scope:
       - entity.other.inherited-class
     settings:
-      fontStyle: ''
       foreground: "{{INHERITED_CLASS}}"
+
+  # ```ts
+  # //        v
+  # function print() { }
+  #
+  # class Header extends Component {
+  #   // v
+  #   render() { }
+  # }
+  #
+  # // v
+  # print()
+  # ```
   - name: Function name
     scope:
       - entity.name.function
     settings:
-      fontStyle: ''
       foreground: "{{FUNCTION_NAME}}"
+
+  # ```ts
+  # //              v
+  # function print(arg) { }
+  #
+  # // v
+  # ((name) => {});
+  #
+  # class Animal {
+  #   //                  v
+  #   constructor(public name: string) { }
+  # }
+  # ```
   - name: Function argument
     scope:
       - variable.parameter
     settings:
-      fontStyle: italic
       foreground: "{{ARGUMENT}}"
+      fontStyle:  italic
+
+  # ```html
+  # <!--  v         v     v -->
+  # <div><h1>Hello</h1></div>
+  # ```
   - name: Tag name
     scope:
       - entity.name.tag
     settings:
-      fontStyle: ''
       foreground: "{{TAG_NAME}}"
+
+  # ```html
+  # <!--   v            -->
+  # <div class="row">
+  #   <!--   v                     -->
+  #   <a ui-sref="app.login">Click</a>
+  # </div>
+  # ```
   - name: Tag attribute
     scope:
       - entity.other.attribute-name
     settings:
-      fontStyle: ''
       foreground: "{{TAG_ATTRIBUTE}}"
+
+  # ```ts
+  # //    v
+  # Math.pow(2, 3)
+  #
+  # //       v
+  # console.log("Hi")
+  # ```
   - name: Library function
     scope:
       - support.function
     settings:
-      fontStyle: ''
       foreground: "{{LIBRARY_FUNCTION}}"
+
+  # ```ts
+  # // v
+  # Math.pow(2, 3)
+  #
+  # //            v
+  # Number.MAX_SAFE_INTEGER
+  # ```
   - name: Library constant
     scope:
       - support.constant
     settings:
-      fontStyle: ''
       foreground: "{{LIBRARY_CONSTANT}}"
+
+  # ```ts
+  # // v
+  # Error
+  #
+  # // v
+  # console.log("Hi")
+  # ```
   - name: Library class
     scope:
       - support.class
     settings:
-      fontStyle: italic
       foreground: "{{LIBRARY_CLASS}}"
+      fontStyle:  italic
+
+  # ```ts
+  # class Animal {
+  #   //                          v
+  #   constructor(public name: string) { }
+  # }
+  # ```
   - name: Library type
     scope:
       - support.type
     settings:
-      fontStyle: italic
       foreground: "{{LIBRARY_TYPE}}"
+      fontStyle:  italic
+
+  # ?
   - name: Library variable
     scope:
       - support.other.variable
     settings:
-      fontStyle: ''
+      fontStyle:  ""
+
+  # ?
   - name: Invalid
     scope:
       - invalid
     settings:
       background: "{{RED}}"
-      fontStyle: ''
       foreground: "{{WHITISH}}"
+
+  # ?
   - name: Invalid deprecated
     scope:
       - invalid.deprecated
     settings:
       background: "{{PURPLE}}"
       foreground: "{{WHITISH}}"
-  - scope:
-      - constant.numeric.line-number.find-in-files - match
-    settings:
-      foreground: "{{alpha PURPLE 0.627}}"
-  - scope:
-      - entity.name.filename.find-in-files
-    settings:
-      foreground: "{{YELLOW}}"
+
+  # ```ts
+  # const user = {
+  #   // v
+  #   name: 'SuperPaintman',
+  #   //  v
+  #   language: 'TypeScript'
+  # }
+  # ```
   - name: Object Key
     scope:
       - meta.object-literal.key
     settings:
       foreground: "{{YELLOW}}"
+
+  # ```ts
+  # const user = {
+  #   //  v
+  #   name: 'SuperPaintman',
+  #   //      v
+  #   language: 'TypeScript'
+  # }
+  # ```
+  #
+  # ```css
+  # body {
+  #   /*         v          */
+  #   line-height: 1.4em;
+  #   /*        v           */
+  #   background: #f5f5f5;
+  # }
+  # ``
   - name: Object Key-Value Separator
     scope:
       - punctuation.separator.key-value
     settings:
       foreground: "{{PURPLE}}"
+
+  # ```ts
+  # //    v
+  # Number.MAX_SAFE_INTEGER
+  #
+  # //     v
+  # console.log("Hi!")
+  # ```
   - name: Punctuation Accessor
     scope:
       - punctuation.accessor
     settings:
       foreground: "{{RED}}"
+
+  # ```ts
+  # //                    v                    v
+  # console.log(`${this.name} moved ${distanceInMeters}m.`);
+  # ```
   - name: Template Expression
     scope:
       - meta.template.expression
     settings:
       foreground: "{{WHITISH}}"
+
+  # ```ts
+  # //            v         v        v                v
+  # console.log(`${this.name} moved ${distanceInMeters}m.`);
+  # ```
   - name: Template Expression Brakets
     scope:
       - punctuation.definition.template-expression.begin
@@ -223,37 +416,110 @@ tokenColors:
     settings:
       foreground: "{{TEMPLATE_BRAKET}}"
 
+  # ?
+  - scope:
+      - constant.numeric.line-number.find-in-files - match
+    settings:
+
+      foreground: "{{alpha PURPLE 0.627}}"
+
+  # ?
+  - scope:
+      - entity.name.filename.find-in-files
+    settings:
+      foreground: "{{YELLOW}}"
+
+
+  ##############################################################################
+  #
   # JSON
+  #
+  ##############################################################################
+  # ```json
+  # {
+  #   /*             v                */
+  #   "name": "monokai-extended",
+  #   /*                    v         */
+  #   "displayName": "Monokai Extended"
+  # }
+  # ```
   - name: JSON String
     scope:
       - meta.structure.dictionary.json
       - string.quoted.double.json
     settings:
       foreground: "{{GREY_LIGHT}}"
+
+  # ```json
+  # {
+  #   /* v                            */
+  #   "name": "monokai-extended",
+  #   /*    v                         */
+  #   "displayName": "Monokai Extended"
+  # }
+  # ```
   - name: JSON Property
     scope:
       - support.type.property-name.json
     settings:
-      fontStyle: ''
       foreground: "{{RED}}"
+      fontStyle:  ""
 
+
+  ##############################################################################
+  #
   # Diff
+  #
+  ##############################################################################
+  # ```diff
+  # #  v
+  # index 99a08fa..21317e7 100644
+  # #  v
+  # --- a/src/Monokai-Extended.yml
+  # #  v
+  # +++ b/src/Monokai-Extended.yml
+  # #  v
+  # @@ -17,10 +17,11 @@
+  #    STRING:             "{{YELLOW}}"
+  #    NUMBER:             "{{PURPLE}}"
+  #    CONSTANT:           "{{PURPLE}}"
+  # ```
   - name: diff.header
     scope:
       - meta.diff
       - meta.diff.header
     settings:
       foreground: "{{GREY}}"
+
+  # ```diff
+  # # v
+  # -  TYPE:               "{{BLUE}}"
+  # +  STORAGE_TYPE:       "{{BLUE}}"
+  #    LIBRARY_FUNCTION:   "{{BLUE}}"
+  #    LIBRARY_CONSTANT:   "{{BLUE}}"
+  #    LIBRARY_CLASS:      "{{BLUE}}"
+  # ```
   - name: diff.deleted
     scope:
       - markup.deleted
     settings:
       foreground: "{{RED}}"
+
+  # ```diff
+  # -  TYPE:               "{{BLUE}}"
+  # # v
+  # +  STORAGE_TYPE:       "{{BLUE}}"
+  #    LIBRARY_FUNCTION:   "{{BLUE}}"
+  #    LIBRARY_CONSTANT:   "{{BLUE}}"
+  #    LIBRARY_CLASS:      "{{BLUE}}"
+  # ```
   - name: diff.inserted
     scope:
       - markup.inserted
     settings:
       foreground: "{{GREEN}}"
+
+  # ?
   - name: diff.changed
     scope:
       - markup.changed
