@@ -1,4 +1,8 @@
 # Changelog
+## 0.3.0
+### GitGutter
+#### `added` - colors for GitGutter
+
 ## 0.2.0
 ### JavaScript / TypeScirpt
 #### `added` - color for `this`
