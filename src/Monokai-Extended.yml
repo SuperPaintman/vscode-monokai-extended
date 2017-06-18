@@ -33,24 +33,31 @@
   FUNCTION_NAME:      "{{GREEN}}"
   TAG_ATTRIBUTE:      "{{GREEN}}"
   TEMPLATE_BRAKET:    "#E69F66"
+  DIFF_ADDED:         "{{GREEN}}"
+  DIFF_DELETED:       "{{RED}}"
+  DIFF_MODIFIED:      "{{PURPLE}}"
 
 name: Monokai Extended
 type: dark
 colors:
   # Editor
-  editor.background:              "{{BACKGROUND}}"
-  editorCursor.foreground:        "{{FOREGROUND_CURSOR}}"
-  editor.foreground:              "{{FOREGROUND}}"
-  editor.lineHighlightBackground: "#35352b"
-  editor.selectionBackground:     "#49483E"
+  editor.background:               "{{BACKGROUND}}"
+  editorCursor.foreground:         "{{FOREGROUND_CURSOR}}"
+  editor.foreground:               "{{FOREGROUND}}"
+  editor.lineHighlightBackground:  "#35352b"
+  editor.selectionBackground:      "#49483E"
   # Editor whitespace
-  editorWhitespace.foreground:    "#6A6A6466"
+  editorWhitespace.foreground:     "#6A6A6466"
+  # Editor Gutter
+  editorGutter.addedBackground:    "{{DIFF_ADDED}}"
+  editorGutter.deletedBackground:  "{{DIFF_DELETED}}"
+  editorGutter.modifiedBackground: "{{DIFF_MODIFIED}}"
   # Status bar
-  statusBar.background:           "#23241F"
+  statusBar.background:            "#23241F"
   # Activity bar
-  activityBar.background:         "#23241F"
+  activityBar.background:          "#23241F"
   # Side bar
-  sideBar.background:             "#252620"
+  sideBar.background:              "#252620"
 tokenColors:
   - settings:
       background:                "{{BACKGROUND}}"
@@ -558,7 +565,7 @@ tokenColors:
     scope:
       - markup.deleted
     settings:
-      foreground: "{{RED}}"
+      foreground: "{{DIFF_DELETED}}"
 
   # ```diff
   # -  TYPE:               "{{BLUE}}"
@@ -572,11 +579,35 @@ tokenColors:
     scope:
       - markup.inserted
     settings:
-      foreground: "{{GREEN}}"
+      foreground: "{{DIFF_ADDED}}"
 
   # ?
   - name: diff.changed
     scope:
       - markup.changed
     settings:
-      foreground: "{{YELLOW}}"
+      foreground: "{{DIFF_MODIFIED}}"
+
+
+  ##############################################################################
+  #
+  # GitGutter
+  #
+  ##############################################################################
+  - name: GitGutter - deleted
+    scope:
+      - markup.deleted.git_gutter
+    settings:
+      foreground: "{{DIFF_DELETED}}"
+
+  - name: GitGutter - inserted
+    scope:
+      -  markup.inserted.git_gutter
+    settings:
+      foreground: "{{DIFF_ADDED}}"
+
+  - name: GitGutter - changed
+    scope:
+      - markup.changed.git_gutter
+    settings:
+      foreground: "{{DIFF_MODIFIED}}"
