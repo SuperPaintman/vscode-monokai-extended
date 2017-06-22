@@ -1,4 +1,24 @@
 # Changelog
+## 0.4.0
+### Clojure
+#### `added` - color for `def`'s
+
+```clojure
+; v
+(ns my.test)
+; v
+(def get-name [])
+```
+
+#### `added` - color for keywords
+
+```clojure
+(ns my.test
+;      v                     v
+  (:require [clojure.test :refer [deftest is]]
+            anagram))
+```
+
 ## 0.3.0
 ### GitGutter
 #### `added` - colors for GitGutter
