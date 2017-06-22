@@ -49,6 +49,25 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 --------------------------------------------------------------------------------
 
 
+## Colors
+
+Palette      | Hex Code
+-------------|-------------------------------------------------------------------
+Background   | ![#272822](https://placehold.it/16/272822/000000?text=+) `#272822`
+Foreground   | ![#F8F8F2](https://placehold.it/16/F8F8F2/000000?text=+) `#F8F8F2`
+Comment      | ![#75715E](https://placehold.it/16/75715E/000000?text=+) `#75715E`
+Red          | ![#F92672](https://placehold.it/16/F92672/000000?text=+) `#F92672`
+Orange       | ![#FD971F](https://placehold.it/16/FD971F/000000?text=+) `#FD971F`
+Light Orange | ![#E69F66](https://placehold.it/16/E69F66/000000?text=+) `#E69F66`
+Yellow       | ![#E6DB74](https://placehold.it/16/E6DB74/000000?text=+) `#E6DB74`
+Green        | ![#A6E22E](https://placehold.it/16/A6E22E/000000?text=+) `#A6E22E`
+Blue         | ![#66D9EF](https://placehold.it/16/66D9EF/000000?text=+) `#66D9EF`
+Purple       | ![#AE81FF](https://placehold.it/16/AE81FF/000000?text=+) `#AE81FF`
+
+
+--------------------------------------------------------------------------------
+
+
 ## Contributing
 
 1. Fork it (<https://github.com/SuperPaintman/vscode-monokai-extended/fork>)
