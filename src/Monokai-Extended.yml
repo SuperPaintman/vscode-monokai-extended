@@ -530,6 +530,38 @@ tokenColors:
 
   ##############################################################################
   #
+  # Clojure / ClojureScript
+  #
+  ##############################################################################
+  # ```clojure
+  # ; v
+  # (ns my.test)
+  # ; v
+  # (def get-name [])
+  # ```
+  - name: Clojure - defs
+    scope:
+      - keyword.control.clojure
+    settings:
+      foreground: "{{STORAGE_TYPE}}"
+
+  # ```clojure
+  # (ns my.test
+  # ;      v                     v
+  #   (:require [clojure.test :refer [deftest is]]
+  #             anagram))
+  # ```
+  - name: Clojure - Keyword
+    scope:
+      - constant.keyword.clojure
+    settings:
+      foreground: "{{CONSTANT}}"
+
+  # @todo: add chars (\a, \b, \c ...)
+
+
+  ##############################################################################
+  #
   # Diff
   #
   ##############################################################################
