@@ -42,6 +42,9 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 #### JSON
 ![JSON Screenshot][screenshot-json-image]
 
+#### Clojure
+![Clojure Screenshot][screenshot-clojure-image]
+
 
 --------------------------------------------------------------------------------
 
@@ -85,6 +88,7 @@ This extension is available for free in the [Visual Studio Code Marketplace][vs-
 [screenshot-css-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-css.png
 [screenshot-html-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-html.png
 [screenshot-json-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-json.png
+[screenshot-clojure-image]: https://raw.githubusercontent.com/SuperPaintman/vscode-monokai-extended/master/README/screenshot-clojure.png
 [github-url]: https://github.com/SuperPaintman/vscode-monokai-extended
 [vs-marketplace-url]: https://marketplace.visualstudio.com/items/SuperPaintman.monokai-extended
 [original-theme-url]: http://colorsublime.com/theme/Monokai
