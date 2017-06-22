@@ -1,4 +1,8 @@
 # Changelog
+## 0.4.1
+#### Chore
+##### `added` - table of colors to `README.md`
+
 ## 0.4.0
 ### Clojure
 #### `added` - color for `def`'s
