@@ -637,6 +637,137 @@ tokenColors:
 
   ##############################################################################
   #
+  # Markdown
+  #
+  ##############################################################################
+  # ?
+  - name: Markdown Headers
+    scope:
+      - markup.heading.markdown
+      - markup.heading.setext.1.markdown
+      - markup.heading.setext.2.markdown
+    settings:
+      foreground: "{{ORANGE}}"
+
+  # ?
+  - name: Markdown Header 1
+    scope:
+      - heading.1.markdown
+      - markup.heading.setext.1.markdown
+    settings:
+      foreground: "#FC951E"
+
+  # ?
+  - name: Markdown Header 2
+    scope:
+      - heading.2.markdown
+      - markup.heading.setext.2.markdown
+    settings:
+      foreground: "#E8891C"
+
+  # ?
+  - name: Markdown Header 3
+    scope:
+      - heading.3.markdown
+    settings:
+      foreground: "#D47D19"
+
+  # ?
+  - name: Markdown Header 4
+    scope:
+      - heading.4.markdown
+    settings:
+      foreground: "#BF7117"
+
+  # ?
+  - name: Markdown Header 5
+    scope:
+      - heading.5.markdown
+    settings:
+      foreground: "#AB6515"
+
+  # ?
+  - name: Markdown Header 6
+    scope:
+      - heading.6.markdown
+    settings:
+      foreground: "#965912"
+
+  # ?
+  - name: Markdown Bold
+    scope:
+      - markup.bold.markdown
+    settings:
+      foreground: "{{RED}}"
+      fontStyle: bold
+
+  # ?
+  - name: Markdown Italic
+    scope:
+      - markup.italic.markdown
+    settings:
+      foreground: "#e42e70"
+      fontStyle: italic
+
+  # ?
+  - name: Markdown Quite
+    scope:
+      - markup.quote.markdown
+    settings:
+      foreground: "{{BLUE}}"
+      fontStyle: italic
+
+  # ?
+  - name: Markdown URL
+    scope:
+      - markup.underline.link.image.markdown
+      - markup.underline.link.markdown
+    settings:
+      foreground: "{{GREEN}}"
+
+  # ?
+  - name: Markdown Raw Inline
+    scope:
+      - markup.inline.raw.string.markdown
+    settings:
+      foreground: "#ec3533"
+
+  # ?
+  - name: Markdown Separator
+    scope:
+      - meta.separator.markdown
+    settings:
+      background: "#ffffff0f"
+      foreground: "#ffffff33"
+      fontStyle: bold
+
+  # ?
+  - name: Markdown Punctuation
+    scope:
+      - punctuation.definition.list.begin.markdown
+      - punctuation.definition.string.begin.markdown
+      - punctuation.definition.string.end.markdown
+      - punctuation.definition.metadata.markdown
+    settings:
+      foreground: "{{GREY_LIGHT}}"
+
+  # ?
+  - name: Markdown Fenced Code
+    scope:
+      - markup.fenced_code.block.markdown
+    settings:
+      foreground: "{{GREY_LIGHT}}"
+
+  # ?
+  - name: Markdown - fenced code block
+    scope:
+      - markup.fenced_code.block.markdown meta.embedded.block
+    settings:
+      foreground: "{{FOREGROUND}}"
+
+
+  ##############################################################################
+  #
   # Diff
   #
   ##############################################################################
