@@ -111,6 +111,6 @@ Purple       | ![#AE81FF](https://placehold.it/16/AE81FF/000000?text=+) `#AE81FF
 [github-url]: https://github.com/SuperPaintman/vscode-monokai-extended
 [vs-marketplace-url]: https://marketplace.visualstudio.com/items/SuperPaintman.monokai-extended
 [original-theme-url]: http://colorsublime.com/theme/Monokai
-[badge-marketplace-image]: http://vsmarketplacebadge.apphb.com/version/SuperPaintman.monokai-extended.svg
-[badge-installs-image]: http://vsmarketplacebadge.apphb.com/installs/SuperPaintman.monokai-extended.svg
-[badge-ratings-image]: http://vsmarketplacebadge.apphb.com/rating-short/SuperPaintman.monokai-extended.svg
+[badge-marketplace-image]: https://vsmarketplacebadge.apphb.com/version/SuperPaintman.monokai-extended.svg
+[badge-installs-image]: https://vsmarketplacebadge.apphb.com/installs/SuperPaintman.monokai-extended.svg
+[badge-ratings-image]: https://vsmarketplacebadge.apphb.com/rating-short/SuperPaintman.monokai-extended.svg
