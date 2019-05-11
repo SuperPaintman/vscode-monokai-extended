@@ -5,9 +5,10 @@
   YELLOW:             "#E6DB74"
   BLUE:               "#66D9EF"
   PURPLE:             "#AE81FF"
-  RED:                '#F92672'
+  RED:                "#F92672"
   GREEN:              "#A6E22E"
   ORANGE:             "#FD971F"
+  ORANGE_LIGHT:       "#E69F66"
 
   BACKGROUND:         "#272822"
   FOREGROUND:         "#F8F8F2"
@@ -32,7 +33,8 @@
   INHERITED_CLASS:    "{{GREEN}}"
   FUNCTION_NAME:      "{{GREEN}}"
   TAG_ATTRIBUTE:      "{{GREEN}}"
-  TEMPLATE_BRAKET:    "#E69F66"
+  TEMPLATE_BRAKET:    "{{ORANGE_LIGHT}}"
+  STRING_PLACEHOLDER: "{{ORANGE_LIGHT}}"
   DIFF_ADDED:         "{{GREEN}}"
   DIFF_DELETED:       "{{RED}}"
   DIFF_MODIFIED:      "{{PURPLE}}"
@@ -558,6 +560,79 @@ tokenColors:
       foreground: "{{CONSTANT}}"
 
   # @todo: add chars (\a, \b, \c ...)
+
+
+  ##############################################################################
+  #
+  # Go
+  #
+  ##############################################################################
+  # ```go
+  # // v
+  # func main() {}
+  # ```
+  - name: Go - func
+    scope:
+      - keyword.function.go
+    settings:
+      foreground: "{{STORAGE_TYPE}}"
+
+  # ```go
+  # func main() {
+  # // v
+  #   var i int
+  # }
+  # ```
+  - name: Go - var
+    scope:
+      - keyword.var.go
+    settings:
+      foreground: "{{STORAGE_TYPE}}"
+
+  # ```go
+  # // v
+  # type User struct{}
+  # ```
+  - name: Go - type
+    scope:
+      - keyword.type.go
+    settings:
+      foreground: "{{STORAGE_TYPE}}"
+
+  # ```go
+  # //    v
+  # user.Save()
+  #
+  # type Caller interface {
+  # // v
+  #   Call()
+  # }
+  # ```
+  - name: Go Function
+    scope:
+      - support.function.go
+    settings:
+      foreground: "{{FUNCTION_NAME}}"
+
+  # ```go
+  # //  v
+  # user.Save()
+  # ```
+  - name: Go Period
+    scope:
+      - punctuation.other.period.go
+    settings:
+      foreground: "{{RED}}"
+
+  # ```go
+  # //          v
+  # fmt.Printf("%d\n", 20)
+  # ```
+  - name: Go Placeholder
+    scope:
+      - constant.other.placeholder.go
+    settings:
+      foreground: "{{STRING_PLACEHOLDER}}"
 
 
   ##############################################################################
