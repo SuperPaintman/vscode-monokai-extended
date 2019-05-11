@@ -1,4 +1,11 @@
 # Changelog
+## 0.5.0
+#### Go
+##### `added` - colors for some scopes
+
+#### Markdown
+##### `added` - colors for some scopes
+
 ## 0.4.1
 #### Chore
 ##### `added` - table of colors to `README.md`
