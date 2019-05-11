@@ -1,4 +1,8 @@
 # Changelog
+## 0.5.1
+#### Chore
+##### `changed` - urls in `README.md`
+
 ## 0.5.0
 #### Go
 ##### `added` - colors for some scopes
